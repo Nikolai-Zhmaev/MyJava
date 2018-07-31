@@ -42,11 +42,11 @@ public class Main {
     private static void creationTree(String nameTree) { // метод для создания дерева и заполнения его случайным образом
         Tree tree = new TreeImpl();
         int counter = 1; // создадим счетчик для заполнения дерева 15 элементами
-        while ( counter!=15 ) {
+        while ( counter < 15 ) {
             addNode(tree, generateID(), nameTree);
-            tree.travers(Tree.TraversMode.PRE_ORDER);
             counter++;
-        }
+         }
+        tree.travers(Tree.TraversMode.PRE_ORDER);
     }
 
     private static int generateID() {  // создадим метод для генерации случайных чисел в диапазоне от -100 до 100
